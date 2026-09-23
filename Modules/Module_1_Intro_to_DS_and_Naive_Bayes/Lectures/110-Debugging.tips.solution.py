@@ -1,0 +1,80 @@
+# ---
+# jupyter:
+#   jupytext:
+#     text_representation:
+#       extension: .py
+#       format_name: percent
+#       format_version: '1.3'
+#       jupytext_version: 1.19.5
+#   kernelspec:
+#     display_name: Python 3 (ipykernel)
+#     language: python
+#     name: python3
+# ---
+
+# %% [markdown] id="0gleHmztcLX6"
+# ## Soft ( Professional ) skills
+
+# %% colab={"base_uri": "https://localhost:8080/", "height": 106} executionInfo={"elapsed": 18, "status": "error", "timestamp": 1770414631011, "user": {"displayName": "deepdive datascience", "userId": "06241824193725215643"}, "user_tz": 420} id="h03Q6jXBfFWb" outputId="b8b96145-9b7b-46d2-c142-e9021ce58a56"
+a = 5+
+
+# %% [markdown] id="H5rAXGu1cVdB"
+#
+# -  Step away - Get a drink. Get a snack. Take a break. Take a walk. Get some sleep. Look at it again in the morning.
+# -  Zoom out and look at the big picture
+# -  Look for other ways to accomplish the same thing
+# -  Look at pre-conditions and post-conditions - What are you assuming is true at the beginning?  What are you hoping is true at the end?  (Are these conditions being met?)
+# -  Rubber Duck - It helps to just talk things through. And you might see -  something new when you go to explain it.
+# -  Set aside and work on other code or another part of the project.
+# -  Take deep breaths, preferably outside.  
+# -  Exercise / movement
+# -  Perspective: The big picture- Nobody is going to die if we have a bug in our software. (Unless you're working on a self-driving car, or software for a hospital, or the military, etc.)
+# -  Life is good.
+# -  Move on- Is this really a priority? Is it time to move on and work on something else?  Is this a little detail or really important?  Microsoft has a zillion bugs and people still pay for their products.
+# -  Get someone else to look it over
+# -  Stay calm  - it's hard to think logically if you're upset.  
+# -  Watch a YouTube video or look at a tutorial or Data Camp lesson of what you're trying to do
+# -  IRC Channels
+# -  Slack your classmates!!!
+# -  Post on Stack Overflow/ Reddit
+# -  Look at other people's code on github
+# -  Relax.  You will figure out the issue, eventually.
+
+# %% [markdown] id="oe89reCQcapa"
+#
+#
+# ## Technical skills
+
+# %% [markdown] id="DxxsyotkccU4"
+# -  Google your problem.
+# -  Use existing modules.  Don't reinvent the wheel.
+# -  Reboot! ( ... if you run Windows. 😲 )
+# -  Save things.
+# -  Use git / version control.
+# -  Keep your code clean.
+# -  Develop/run code in a virtualized environment, e.g. container, VM.
+# -  Use functions when possible.
+# -  Figure out what parts are working. Bisect the problem space. What parts are not working?  Does it work with some input and not others?  What makes the bug happen?  Can you reproduce it?
+# -  Comment out code to see how it runs without it
+# >  `# print(array)`
+# -  Comment every single line to explain what it does- Forces you to trace through everything and put things in context. Plus it means you have good comments for later.  Make sure you know what each line is supposed to do.  
+# >`# this line prints out the array so I can see it`   
+# `print(array)`
+# -  Copy code somewhere else and rewrite it - It's easy to miss typos if you're looking at code for too long. Sometimes just retyping helps, but it's easy to include the same typos if you're still looking at the original.
+# -  Copy pasta is not your friend. 😉
+# -  Test little chunks of code outside of the application to make sure it is doing what you expect.
+# -  Log /print everything - types of variables, values of variables, etc. - (DON'T leave this in your code once you get the problem fixed). Even better: use a conditional variable to enable/disable debug messages.
+# -  Google the error in whole or in part -- leave out specific variable names that you came up with as it is unlikely anybody else chose the same names.
+# -  Look @ the line number - Calmly **READ the error message**.  It is often helpful even though it looks scary.
+# -  Read the documentation on the features/functions that you are using.
+# -  Debugging modules - Makes it so you can put breakpoints and step through code line by line.  Get more diagnostic information.  
+#
+
+# %% [markdown] id="IByzgAQ6BO8i"
+# ## Assignment
+# - From now on, when you get an error code, practice reading through what it says (even if you already know what you did wrong).  This helps you to become familiar with what error messages are displayed for various issues.  
+#
+# - Start a list of common error messages and what the solution to the issue was. This will help you if you get the same error message in the future.
+#
+
+# %% id="rVzHUayFTfpM"
