@@ -50,7 +50,7 @@
 
 
 
-5. If there are data cleaning issues, develop recommendations for how to deal with them.  Specifically, handle these common issues:
+1. If there are data cleaning issues, develop recommendations for how to deal with them.  Specifically, handle these common issues:
 
     - identifer columns
     - target column with null counts
@@ -60,9 +60,16 @@
 
 ## Exploratory Data Analysis
 
-6. Produce some visual analysis of the data – like plots showing the distributions of all variables. Recall that Gaussian Naive Bayes assumes the features are normally distributed. Note: you might have to do multiple plots in groups.
+Produce some visual analysis of the data.  Recall that Gaussian Naive Bayes assumes the features are normally distributed and independent. Note: you might have to do multiple plots in groups.
+
+7. Check the distributions of all variables by plotting. 
+
+
 
 1. Check the correlation values between all **feature columns** to ensure there are no substantial correlations between features. This is important to support the decision to classify the ‘target’ using Naïve Bayes.
+
+
+
 
 1. Create two data frames: one with all successful transactions, one with all unsuccessful transactions. **Make sure they are copies and not slices**.
 
@@ -70,57 +77,79 @@
 
 
 
-
 ## Data Processing
 
-### Part 1
+### Single Cross-validation ( CV )
 
 10. Create two data sets: one with all the feature columns (everything except for Unnamed: 0, ID_code and target) and one with just the target. Make sure they are copies and not slices.  And make sure they are the correct dimensions.
 
-1. Define a Gaussian Naïve Bayes model using Sklearn.
+1. Define an empty Gaussian Naïve Bayes model using Sklearn.
 
-1. Divide the two data frames you created in step #10 into training and testing subsets.
+1. Divide the two data sets you created in step #10 into training and testing subsets, i.e. train-test split.
 
-1. Train the model using the training subset of the dataset.
+1. Train ( fit ) the model using the training subset of the dataset.
 
-1. Test the model using the testing subset of the dataset. Calculate and report the accuracy.
+1. Test the model ( predict ) using the testing subset of the dataset.
+
+1. Calculate and report the accuracy.
+
+1. Present a confusion matrix and heatmap
+
+1. Present the results of a Classification Report (sklearn.metrics.classification_report).
 
 
-### Part 2
+### Multiple Cross-validation ( CV )
 
 
-1. Perform a cross-validation loop to calculate the accuracy of your model. Report that accuracy. How does it compare to the accuracy you calculated in #14?
+18. Perform a cross-validation loop and record the accuracy of your model during each iteration.
+
+1. Report the mean accuracy. How does it compare to the accuracy you calculated for the Single CV?
 
 1. Plot a histogram of the accuracy scores you generated in your cross-validation loop. What do you notice about the distribution of accuracy scores?
 
-1.  Present the confusion matrix and the results of your Classification Report (sklearn.metrics.classification_report). What do you notice?
+1. Present a confusion matrix and heatmap
 
-### Part 3
+1. Present the results of a Classification Report (sklearn.metrics.classification_report).  What do you notice?  That is, how do the different metrics compare to each other?
 
-1. The training data is very skewed towards non-successful transactions (about 90% of the training data has ‘target’==0). Remove enough non-successful transaction rows so that your remaining training data is 50%/50% split between successful and non-successful transactions. Hint: you can use the data frames you created in step #9.
 
-1. Repeat the cross-validation process on this data set. Report what your cross-validation accuracy is in this 50/50 case.
+### Balanced data set
+
+The training data is very skewed towards non-successful transactions (about 90% of the training data has ‘target’==0). 
+
+23. Remove enough non-successful transaction rows so that your remaining training data is 50%/50% split between successful and non-successful transactions. Hint: you can use the data frames you created in step #9.
+
+1. Repeat the multiple cross-validation process on this data set.
+
+1. Report what your mean accuracy for this balanced data set.
+
+1. Plot a histogram of the accuracy scores you generated in your cross-validation loop. What do you notice about the distribution of accuracy scores?
+
+1. Present a confusion matrix and heatmap
+
+1. Present the results of a Classification Report (sklearn.metrics.classification_report).  What do you notice?  That is, how do the different metrics compare to each other?
 
 
 
 ## Data Visualization
 
 
-20. Compare the results of your cross-validation with the whole training data and the reduced 50/50 training data
+29. Compare the accuracy results of your multiple cross-validation with the whole training data and the balanced training data
 
-1. Present the confusion matrix and the results of your Classification Report (sklearn.metrics.classification_report)
+1. Present the confusion matrix and heatmap
 
+1. Present the results of your Classification Report (sklearn.metrics.classification_report)
 
 
 
 ## Communicate the Results
 
-22. Communicate the results of your analysis.
+32. Communicate the results of your analysis.
 
 
 
 
 ## Submit Final Project
 
-23. Upload your finished Jupyter notebook to your Project 1 student folder.
+33. Save ( commit ) your finished Jupyter notebook to your Project 1 GitHub repo.
+
 
