@@ -9,7 +9,8 @@ In this project, we want to predict whether or not a future customer will make a
 
 The data provided has the same structure as real data typically available to solve this problem. The columns of the input variables have been anonymized, so there is no intuition available to help judge which variables might be more important, so all variables need to be considered equally.
 
-The project should be done using the Gaussian Naive Bayes classification techniques as covered in class. In this directory is included a recommended "To Do" list for the project.
+The project should be done using the Gaussian Naive Bayes classification techniques as covered in class. In this directory is included a recommended "To Do" list for the project and a "Passes" list.  The Passes file describes which of the To Do steps to do for each pass.
+
 
 The data is available on AWS S3 in two sizes:
 - Small: 
