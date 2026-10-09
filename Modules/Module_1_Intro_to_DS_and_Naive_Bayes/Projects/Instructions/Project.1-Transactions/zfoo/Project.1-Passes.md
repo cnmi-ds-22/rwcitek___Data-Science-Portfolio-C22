@@ -51,3 +51,33 @@
 - do only through step 17
 
 
+
+# Pass 08
+- use the big data set
+- use only the first 50 columns
+- use only the first 50,000 rows
+- do only through step 17
+
+
+
+# Pass 09
+- use the big data set
+- use all the columns and all rows
+- do only through step 17
+
+
+
+# Pass 10
+- use the big data set
+- use all the columns and all rows
+- do only through step 22
+
+
+
+# Pass 11
+- use the big data set
+- use all the columns and all rows
+- do all the steps
+
+
+
