@@ -42,9 +42,6 @@ Create a plot of the tangent of x (`np.tan(x)`) using a dashed line.
 
 ```python
 # Solution
-fig = plt.figure()
-x = np.linspace(0, 10, 100)
-plt.plot(x, np.tan(x), '--');
 
 ```
 
@@ -92,11 +89,7 @@ Create a plot of the tangent of x using 4 colors. Try to use a few different col
 
 ```python
 # Solution
-x = np.linspace(0, 10, 100)
-plt.plot(x, np.tan(x - 0), color='blue')
-plt.plot(x, np.tan(x - 3), color='cornsilk')
-plt.plot(x, np.tan(x - 4), color="tab:orange")
-plt.plot(x, np.tan(x - 5), color='xkcd:cornflower blue');
+
 ```
 
 ## Line Styles
@@ -139,26 +132,16 @@ plt.plot(
 
 ```python
 # Solution
-time = np.linspace(0, 1, 20)
-time
 
 ```
 
 ```python
 # Solution
-population = np.exp(time)
-population
 
 ```
 
 ```python
 # Solution
-plt.plot(
-    time,
-    population,
-    linestyle = "dashdot",
-    color = "blue",
-) ;  # dashdot blue line
 
 ```
 
@@ -211,17 +194,6 @@ Create a plot of population versus time using a solid green line. Add x- and y-a
 
 ```python
 # Solution
-plt.plot(
-    time,
-    population,
-    linestyle = "solid",
-    color = "green",
-) ;  # solid greeen
-
-plt.title("Population Future", size=35,)
-plt.xlabel("Time", size=20)
-plt.ylabel("Population", size=20);
-plt.ylim(0, 3)
 
 ```
 
@@ -314,43 +286,12 @@ plt.ylim(-1.2, 1.2);
 
 ```python
 # Solution
-# Solution
-plt.plot(
-    time,
-    population,
-    # 'v',
-    linestyle = "none",
-
-    marker = "v",
-    markersize=10,
-    markerfacecolor='slateblue',
-    markeredgecolor='black',
-    markeredgewidth=2,
-
-) ;
 
 
 ```
 
 ```python
 # Solution
-# Solution
-# Solution
-plt.plot(
-    time,
-    population,
-    linestyle = "dashed",
-    color="red",
-    linewidth=3,
-
-    marker = "d",
-    markersize=12,
-    markerfacecolor='black',
-    markeredgecolor='yellow',
-    markeredgewidth=1,
-
-) ;
-
 
 ```
 
@@ -436,9 +377,6 @@ plt.ylabel(iris.feature_names[1]) ;
 ### Your Turn
 
 Use `plt.scatter()` to create a scatterplot of petal width versus petal length. Set the size and color of the points equal to the species. Add x and y axis labels.
-
-
-
 ```python
 # Iris data set
 from sklearn.datasets import load_iris
@@ -447,8 +385,6 @@ import pandas as pd
 iris = load_iris()
 iris.keys()
 ```
-
-
 ```python
 # Iris data set
 from sklearn.datasets import load_iris
@@ -460,25 +396,6 @@ iris.keys()
 
 ```python
 # Solution
-x_name = iris.feature_names[2]
-y_name = iris.feature_names[3]
-x_name, y_name
-
-```
-
-```python
-plt.scatter(
-  features[x_name],
-  features[y_name],
-  alpha=0.3,
-  # s = (iris.target),
-  s = (iris.target+130),
-  c = iris.target,
-  cmap='viridis'
-)
-plt.colorbar()
-plt.xlabel(x_name)
-plt.ylabel(y_name) ;
 
 ```
 
@@ -511,26 +428,16 @@ n
 
 ```python
 # Solution
-weight = np.random.normal(150, 10, 1_000)
-weight.size
 
 ```
 
 ```python
 # Solution
-plt.hist(weight, bins = 5 ) ;
 
 ```
 
 ```python
 # Solution
-plt.hist(weight, bins = 30 ) ;
-
-```
-
-```python
-plt.hist(weight, bins = 5 ) ;
-plt.hist(weight, bins = 30 ) ;
 
 ```
 
@@ -598,35 +505,17 @@ plt.legend(
 
 ```python
 # Solution
-weight_kids = np.random.normal(50, 5, 100)
-weight_kids.size
 
 ```
 
 ```python
 # Solution
-weight_adults = np.random.normal(170, 20, 100)
-weight_adults.size
 
 ```
 
 ```python
 # Solution
-plt.hist(
-    weight_kids,
-    label="Kids",
-)
-plt.hist(
-    weight_adults,
-    label="Adults",
-)
 
-plt.legend(
-    ncol=2,
-    frameon=True,
-    framealpha=0.8,
-    bbox_to_anchor=(0.70, -.05),
-    ); # Put legend outside of plot
 ```
 
 ## Dictionaries to set styles
@@ -737,20 +626,13 @@ sns.displot(
 
 
 Create a seaborn violin plot using the `x` variable that was created in the previous example.
-
 ```python
 sns.violinplot?
 ```
 
 ```python
 # Solution
-# Seaborn dist plot
-x = np.random.normal(0,1,1000)
-sns.violinplot(
-    x,
-    color='green',
-    orient = "h",
-    ) ;
+
 ```
 
 ## Pandas
@@ -906,40 +788,16 @@ for i, sp in enumerate(axs.flatten()):
 ### Your Turn
 
 Create a 2x2 subplot of boxplots for each column in the `df` data frame.
-
-
-
 ```python
 df = pd.DataFrame(
     np.random.randn(100, 4),
     index=pd.date_range('1/1/2000', periods=100),
     columns=list('ABCD'),
     )
-```
-
-```python
-np.random.randn?
-```
-
-```python
-df = pd.DataFrame(
-    np.random.randn(100, 4),
-    index=pd.date_range('1/1/2000', periods=100),
-    columns=list('ABCD'),
-    )
-```
-
-```python
-df.head()
 ```
 
 ```python
 # Solution
-fig, axs = plt.subplots(2, 2, figsize = (20,16))
-for i, sp in enumerate(axs.flatten()):
-  sp.boxplot(df[df.columns[i]], label = df.columns[i])
-  sp.legend()
-  sp.set_xlabel(df.columns[i])
 
 ```
 
@@ -969,7 +827,7 @@ In addition, look at how other people code their plots then deconstruct and reco
 
 
 
-## stygian blue
+## Stygian blue
 
 "A [chimerical color]( https://en.wikipedia.org/wiki/Impossible_color#Chimerical_colors
  ) is an imaginary color that can be seen temporarily by looking steadily at a strong color until some of the cone cells become fatigued, temporarily changing their color sensitivities, and then looking at a markedly different color."
@@ -996,6 +854,3 @@ plt.show()
 
 ```
 
-```python
-
-```
