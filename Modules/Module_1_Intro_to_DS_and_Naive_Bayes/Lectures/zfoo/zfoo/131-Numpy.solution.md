@@ -915,7 +915,7 @@ my_list
 
 ```python
 [
-  i * 5
+  i + 5
     for i in my_list
 ]
 
@@ -929,7 +929,7 @@ my_nested_list
 
 ```python
 [
-[  i * 5
+[  i + 5
     for i in x
 ]      for x in my_nested_list
 ]
@@ -958,12 +958,22 @@ print(arr - 5)
 ```
 
 ```python
+print(arr * 5)
+
+```
+
+```python
 print(arr / 5)
 
 ```
 
 ```python
 print(arr // 5)
+
+```
+
+```python
+print(arr % 5)
 
 ```
 
@@ -988,7 +998,7 @@ print(arr ** 3)
 ```
 
 ```python
-print(arr % 3)
+arr.reshape(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,3,3)
 
 ```
 
@@ -1032,7 +1042,7 @@ arr.mean()    # method
 ```python
 # Find the median
 np.median(arr)  # function
-# arr.median()    # method
+# arr.median()    # method - not
 
 ```
 
