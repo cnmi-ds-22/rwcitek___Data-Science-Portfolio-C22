@@ -131,7 +131,7 @@ arr
 
 ```python
 # Create an array of zeros
-np.zeros(15)
+np.zeros(5)
 
 ```
 
@@ -144,13 +144,13 @@ np.ones(5)
 Using a list and '*'
 
 ```python
-five_ones = [1] * 5
+five_ones = [1.0] * 5
 five_ones
 
 ```
 
 ```python
-five_ones * 4
+five_ones * 2
 
 ```
 
@@ -158,18 +158,18 @@ Using an array and '*'
 
 
 ```python
-np.ones(5)*4
+np.ones(5) * 2
 
 ```
 
 ```python
-# Create an array (of length 10) full of 7's
+# Create an array of length 10 full of 7's
 np.full(10, 7)
 
 ```
 
 ```python
-# Float
+# Float - same as np.ones(10)
 np.full(10, 1.0)
 
 ```
@@ -583,6 +583,7 @@ print("After ...")
 print(f"a: {a}")
 print(f"b: {b}")
 print(f"c: {c}")
+
 # a: 1, 8, 3, 4, 5  , b: 1, 2, 3, 4, 5  , c: 1, 2, 3, 4, 5
 # a: 1, 8, 3, 4, 5  , b: 1, 8, 3, 4, 5  , c: 1, 2, 3, 4, 5
 # a: 1, 2, 3, 4, 5  , b: 1, 8, 3, 4, 5  , c: 1, 2, 3, 4, 5
@@ -609,6 +610,7 @@ print("After ...")
 print(f"a: {a}")
 print(f"b: {b}")
 print(f"c: {c}")
+
 # a: 8  , b: 8  , c: 1, 2, 3, 4, 5
 # a: 8  , b: 1, 8, 3, 23, 5  , c: 1, 2, 3, 20, 5
 # a: 1, 8, 3, 23, 5  , b: 8  , c: 1, 2, 3, 20, 5
@@ -660,42 +662,6 @@ arr1
 
 ```
 
-```python
-bar = arr1[1::2]
-bar
-
-```
-
-```python
-arr1[1] = 8
-
-```
-
-```python
-arr1
-
-```
-
-```python
-bar
-
-```
-
-```python
-bar[0] = 22
-
-```
-
-```python
-bar
-
-```
-
-```python
-arr1
-
-```
-
 ### Your Turn
 1. Create an 10-element array with numbers 10 through 1. Assign it to a variable called `seq_array`.
 2. Make a copy of `seq_array` and save it as `seq_array_copy`.
@@ -722,11 +688,15 @@ arr1
 np.random.seed(42)
 arr = np.random.randint(10, size = (5,4))
 print(arr, '\n')
-print(arr[2:4, :]) #[row, column]
+
+```
+
+```python
+print(arr[2:4, :])    # [row, column]
 print()
-print(arr[:, 0:3]) #[row, column]
+print(arr[:, 0:3])    # [row, column]
 print()
-print(arr[2:4, 0:3]) #[row, column]
+print(arr[2:4, 0:3])  # [row, column]
 
 ```
 
