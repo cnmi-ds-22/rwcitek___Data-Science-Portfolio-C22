@@ -1,34 +1,85 @@
 
-# A possible strategy for Project 6
+# Passes
 
 Each pass should be in its own notebook.
 
-Using epochs=4
-pass 1:    100 images, CPU
-pass 2:    200 images, CPU
-pass 3:    400 images, CPU
-pass 4:    800 images, CPU
-pass 5:  1,600 images, CPU
-pass 6:  3,200 images, CPU
-
-Switch to GPU
-pass 7:  6,400 images, GPU
-pass 8: 12,800 images, GPU
-pass 9:    all images, GPU
+## Pass 01
+- CPU
+- 100 images
+- epochs = 4
 
 
-Questions:
+
+## Pass 02
+- CPU
+- 200 images
+- epochs = 4
+
+
+
+## Pass 03
+- CPU
+- 400 images
+- epochs = 4
+
+
+
+## Pass 04
+- CPU
+- 800 images
+- epochs = 4
+
+
+
+## Pass 05
+- CPU
+- 1,600 images
+- epochs = 4
+
+
+
+## Pass 06
+- CPU
+- 3,200 images
+- epochs = 4
+
+
+
+## Pass 07
+- GPU
+- 6,400 images
+- epochs = 4
+
+
+
+## Pass 08
+- GPU
+- 12,800 images
+- epochs = 4
+
+
+
+## Pass 09
+- GPU
+- all images
+- epochs = 4
+
+
+
+## Questions:
 - how do the distributions of probabilities change as the number of images increase?  How would you explain the change?  That is, what does that change suggest?
 - how do the distributions of probabilities for each class change as the number of images increase?
 - which images are dogs, but the CNN identified with a high probability of being a cat?
 - which images are cats, but the CNN identified with a high probability of being a dog?
 - did you find any images that look "odd", that is, where you wouldn't classify it as a dog or a cat?  How did you identify them?
 
-Some things to try:
+
+
+## Some other things to try
 - some more passes, this might hit your GPU limit
-  pass 10:   all images, GPU, epochs=8
-  pass 11:   all images, GPU, epochs=8, batch size=256
-  pass 12:   all images, GPU, epochs=12, batch size=256
+  - pass 10:   all images, GPU, epochs=8
+  - pass 11:   all images, GPU, epochs=8, batch size=256
+  - pass 12:   all images, GPU, epochs=12, batch size=256
 - add, remove layers
 - change the number of nodes in one or more layers
 - change the activation function for one or more layers
