@@ -1,0 +1,46 @@
+
+# A possible strategy for Project 6
+
+Each pass should be in its own notebook.
+
+Using epochs=4
+pass 1:    100 images, CPU
+pass 2:    200 images, CPU
+pass 3:    400 images, CPU
+pass 4:    800 images, CPU
+pass 5:  1,600 images, CPU
+pass 6:  3,200 images, CPU
+
+Switch to GPU
+pass 7:  6,400 images, GPU
+pass 8: 12,800 images, GPU
+pass 9:    all images, GPU
+
+
+Questions:
+- how do the distributions of probabilities change as the number of images increase?  How would you explain the change?  That is, what does that change suggest?
+- how do the distributions of probabilities for each class change as the number of images increase?
+- which images are dogs, but the CNN identified with a high probability of being a cat?
+- which images are cats, but the CNN identified with a high probability of being a dog?
+- did you find any images that look "odd", that is, where you wouldn't classify it as a dog or a cat?  How did you identify them?
+
+Some things to try:
+- some more passes, this might hit your GPU limit
+  pass 10:   all images, GPU, epochs=8
+  pass 11:   all images, GPU, epochs=8, batch size=256
+  pass 12:   all images, GPU, epochs=12, batch size=256
+- add, remove layers
+- change the number of nodes in one or more layers
+- change the activation function for one or more layers
+- adjust the kernel shape in one or more layers
+- adjust the stride in one or more layers
+- read the docs for what else could be changed
+- create a new data set with 3 or more animals
+- add a dropout option in one or more layers
+- add an early stop option in one or more layers
+- ask AI for suggestions
+
+
+
+
+
